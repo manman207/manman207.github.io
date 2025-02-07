@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Triumph's Portfolio</title>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                background: #0a192f;
+                color: #8892b0;
+                line-height: 1.6;
+            }    
+
+            .container{
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+
+            .section{
+                min-height: 100vh;
+                padding: 5rem 0;
+            }
+
+            .nav{
+                position: fixed;
+                width: 100%;
+                padding: 1.5rem 0;
+                background:rgba(10,25,47,0.85);
+                backdrop-filter: blur(10px);
+                z-index: 2;
+                top: 0;
+            }
+
+            .nav-links{
+                display: flex;
+                justify-content: flex-end;
+                list-style: none;
+            }
+
+            .nav-links li{
+                margin-left:2rem;
+            }
+
+            .nav-links a{
+                color: #64ffda;
+                text-decoration: none;
+                font-size: 2.1rem;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links a:hover{
+                color: white;
+            }
+
+            .intro{
+                display:flex;
+                align-items: center;
+                padding-top: 8rem;
+            }
+
+            .intro-content{
+                flex: 1;
+            }
+
+            .intro img{
+                height: 300px;
+                width: 300px;
+                border-radius: 100%;
+                margin-top: 10px;
+            }
+
+            .intro h1{
+                font-size: 4rem;
+                color: #ccd6f6;
+                margin-bottom: 1rem;
+            }
+
+            .intro h2{
+                font-size: 2.5rem;
+                color: #8892b0;
+                margin-bottom: 2rem;
+            }
+
+            .intro p{
+                max-width: 540px;
+                margin-bottom: 3rem;
+            }
+
+            .cta-btn{
+                display: inline-block;
+                padding: 1rem 2rem;
+                border: 1px solid #64ffda;
+                border-radius: 4px;
+                color: black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+
+            .cta-btn:hover{
+                background: rgba(100,255,218,0.1);
+                color: #64ffda;
+            }
+
+            .projects-grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+                gap:2rem;
+                margin-top: 3rem;
+            }
+
+            .project-card{
+                background: #112240;
+                padding: 2rem;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+            }
+
+            .project-card img{
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+
+            .project-card h3{
+                color: #ccd6f6;
+                margin-bottom: 0.5rem;
+            }
+
+            .skills-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .skill-item{
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .skill-item i{
+                font-size: 5.5rem;
+                color: #64ffda;
+                margin-bottom: 1rem;
+            }
+            
+            .skill-item h3{
+                font-size:2.5rem;
+            }
+
+            .contact-form{
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .form-group{
+                margin-bottom: 1.5rem;
+            }
+
+            input,textarea{
+                width: 100%;
+                padding: 1rem;
+                background: #112240;
+                border: 1px solid #233554;
+                border-radius: 4px;
+                color: #ccd6f6;
+            }
+
+            footer{
+                text-align: center;
+                padding: 2rem 0;
+                border-top: 1px solid #233554;
+            }
+
+            .social-links{
+                margin-bottom: 1rem;
+            }
+
+            .social-links a{
+                color: #64ffda;
+                margin: 0 1rem;
+                font-size: 1.5rem;
+            }
+
+            @media(max-width: 768px){
+                .intro{
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .nav-links{
+                    display: flex;
+                }
+
+                .intro h1{
+                    font-size: 3rem;
+                }
+
+                .intro h2{
+                    font-size: 2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li ><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <secton class="intro section">
+            <div class="container">
+                <div id="about" class="intro-content">
+                    <img src="itachi.jfif" class="human">
+                    <h1 >Hi, I'm Loving Triumph</h1>
+                    <h2>Front-End Developer & UI Designer</h2>
+                    <p>I create beautiful and functional websites that help businesses grow and succeed online</p>
+                </div>
+            </div>
+        </secton>
+
+        <section class="section">
+            <div class="container">
+                <h2 id="projects">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="project1.jpg" alt="Project 1">
+                        <h3>E-commerce Platform</h3>
+                        <p>A modern shopping platform with seamless user experience</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="social-media.png" alt="Project 1">
+                        <h3>Social Media Platform</h3>
+                        <p>Connecting with friends and family has never been easier</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class ="section">
+            <div class="container">
+                <h2 id="skills">Skills & Expertise</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <h3>React Development</h3>
+                        <h3>Python Programming</h3>
+                        <h3>Java Programming</h3>
+                        <h3>Web Design</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">Send Message</button>
+                    </form>
+            </div>
+        </section>
+
+         <footer>
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://github.com/manman207"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/man-man-7714b034b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BguUi39cwSgiF0dYkQ1cbeA%3D%3D"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://x.com/triumph_lo50875"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
